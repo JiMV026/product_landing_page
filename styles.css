@@ -1,0 +1,253 @@
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    font-size: 16px;
+    --box-shadow: 0px 10px 5px rgb(85, 85, 85);
+    --background-color1: #faebd7;
+    --background-color2: #fff8dc;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+header{
+    width: 100%;
+    min-height: 70px;
+    max-height: 100px;
+    padding: 5px 50px;
+    position: fixed;
+    display: flex;
+    /* box-shadow: var(--box-shadow); */
+    place-content: center space-between;
+    background-color: var(--background-color2);
+    /* border-radius: 15px; */
+}
+
+main {
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    width: 85%;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 50px;
+    /* box-shadow: var(--box-shadow);
+    border-radius: 15px; */
+}
+
+section, .nav-link {
+    background-color: var(--background-color1);
+}
+
+h1, h4, h2 {
+    color: orangered;
+    margin: 10px auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+ol li {
+    list-style-type: none;
+}
+
+#div-title {
+    width: 30%;
+    /* height: 200px; */
+    background-color: var(--background-color1);
+    margin: 15px auto;
+    /* border-radius: 15px; */
+}
+
+header, #div-title, section, .product-price {
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+}
+
+#nav-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-auto-flow: column;
+    height: 100%;
+    align-items: center;
+}
+
+#header-img {
+    min-height: 1em;
+    max-height: 3em;
+}
+
+#how-it-works {
+    width: fit-content
+}
+
+iframe {
+    margin: auto;
+    width: 800px;
+    height: 420px;
+}
+
+#background-image {
+    background-image: url(https://media.istockphoto.com/photos/calligraphic-handwritten-script-handwriting-manuscript-texture-picture-id537889874?s=612x612);
+    filter: blur(3px);
+    position: fixed;
+    top: -5rem;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#pricing {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    height: fit-content;
+}
+
+.product-price {
+    margin:auto;
+    text-align: center;
+    line-height: 1.5;
+    background-color:var(--background-color2) ;
+    max-width: 300px;
+    height: fit-content;
+    padding-top: 20px;
+    /* border-radius: 15px;
+    box-shadow: var(--box-shadow); */
+}
+
+h4 {
+    width: 100%;
+    background-color: #fddcb1;
+    line-height: 2;
+    font-size: 1.5rem;
+}
+
+
+.nav-link {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    padding: 10px 0px
+}
+
+.icon-div {
+    height: 100%;
+    width: 100%;
+}
+
+input[type="submit"], input[type="button"] {
+    display: block;
+    margin: 15px auto;
+    min-width: 150px;
+    max-width: 200px;
+    padding: 5px;
+    font-size: 1.3rem;
+}
+
+input[type="email"] {
+    display: block;
+    margin: 20px auto 0 auto;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--background-color2);
+    box-shadow: 0 -10px 5px rgb(83, 83, 83);
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1rem;
+}
+
+#footer-nav {
+    /* display: block; */
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+}
+
+#footer-nav a {
+    text-decoration: none;
+    color: black;
+}
+
+footer p {
+    display: block;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+@media (max-width: 700px) {
+    #pricing {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, 30%);
+        height: fit-content;
+    }
+
+    :root {
+        font-size: 16px
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    iframe {
+        min-width: 150px;
+        min-height: 75px;
+        max-width: 290px;
+        max-height: 190px;
+    }
+
+    #how-it-works {
+        padding: 1rem;
+    }
+/* 
+    header {
+        flex-direction: column;
+    } */
+
+    #nav-bar {
+        display: grid;
+        grid-template-rows: repeat(3, 20px);
+        grid-auto-flow: column;
+        height: 100%;
+        align-items: center;
+        margin-left: 50px
+    }
+
+    .nav-link {
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-size: 0.7rem;
+        padding: 3px 0px
+    }
+}
